@@ -1,0 +1,62 @@
+body{
+    background-color:aliceblue;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+}
+.box{
+    display: grid;
+    grid-template-columns: repeat(3,9rem);
+    grid-gap: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+.cell{
+    width: 100%;
+    height: 9rem;
+    border: 4px solid transparent;
+    border-image: linear-gradient(45deg, #2a559b, #645abd) 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.cell:hover{
+    background-color:rgb(227, 235, 242);
+}
+h1 {
+    font-family: 'Impact', Haettenschweiler, 'Arial Narrow', sans-serif;
+    font-size: 4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0.1, 0.1,0.5, 0.5); /* Adding a subtle shadow */
+    background: linear-gradient(65deg, #2a559b, #645abd); /* Gradient background */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensure the background gradient covers the text */
+}
+
+@media(max-width:600px){
+    .box{
+        display: grid;
+        grid-template-columns: repeat(3,5rem);
+        grid-gap: 1rem;
+        padding: 2rem;
+    }
+    .cell{
+        height: 5rem;
+    }
+    h1{
+        font-size: 3rem;
+    }
+}
+p{
+    font-size: xx-large;
+    font-weight: bolder;
+}
